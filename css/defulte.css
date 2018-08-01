@@ -1,0 +1,671 @@
+@charset "utf-8"
+
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&subset=korean');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700,700i');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,300,300i,400,400i,800,800i');
+
+
+/*	Nanum+Gothic
+		font-family: "Nanum Gothic", sans-serif;*/
+/*	opensans
+		font-family: "Open sans", sans-serif;*/
+/*	Raleway
+		font-family: "Raleway", sans-serif;*/
+
+
+/* reset */
+	html,body {margin:0; padding:0; font-family:"나눔고딕","Nanum Gothic","Helvetica Neue",Arial,
+	sans-serif; font-weight:normal; font-size:12px; height:100%; color:#333; 
+	-webkit-text-size-adjust:none; position:relative; line-height:1.2;}
+	dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote 
+	{margin:0; padding:0; -webkit-text-size-adjust:none;}
+	th,td,input,textarea,select {font-size:12px; color:#333; 
+		font-family:"나눔고딕","Nanum Gothic","Helvetica Neue",Arial,sans-serif; -webkit-text-size-adjust:none;}
+	th,td {word-break:break-all; word-wrap:break-word; -webkit-text-size-adjust:none;}
+	table {border-spacing:0; border-collapse:collapse; -webkit-text-size-adjust:none; border:0; table-layout:fixed;}
+	address,caption,cite,code,dfn,var {font-style:normal; font-weight:normal; -webkit-text-size-adjust:none;}
+	em {font-style:normal; -webkit-text-size-adjust:none;}
+	ol,ul,li {list-style:none;}
+	h1,h2,h3,h4,h5,h6 {font-size:100%;}
+	abbr,acronym {border:0;}
+	hr,legend,caption {visibility:hidden; overflow:hidden; line-height:0; width:0; height:0; margin:0; padding:0;}
+	img,fieldset {border:0 none;}
+	label {cursor:pointer;}
+	a {color:inherit;}
+	a:link, a:visited, a:hover {color:inherit; text-decoration:none;}
+	a:active {text-decoration:none;}
+	input,img {vertical-align:middle;}
+
+	/*layout*/
+		#header_container {
+			position: fixed; left: 0; top: 0;
+			width: 100%; height: 80px;
+			background-color: #212529;
+			z-index: 3000;
+		}
+		#header_container .header_inner {
+			width: 1280px; height: 100%;
+			position: relative;
+			margin: 0 auto;
+		}
+
+		#header_container .logo {
+			position: absolute; left: -10px; top: 50%;
+			margin-top: -27px;
+		}
+
+
+		#header_container .gnb_wrap {
+			position: absolute; right: 30px; top: 50%; 
+			margin-top: -18px;
+
+		}
+
+		#header_container .gnb_wrap li {
+			float: left; margin-left: 20px;
+		}
+
+		#header_container .gnb_wrap li a {
+			display: block;
+			height: 36px; line-height: 36px;
+			color: #fff; font-size: 18px;
+			font-family: font-family: "Raleway", sans-serif;*/;
+			text-transform: uppercase;
+			position: relative;
+		}
+
+		#header_container .gnb_wrap li a:hover{
+			color: #fa0064;
+		}
+
+		#header_container .gnb_wrap li a:after {
+			content: "";
+			position: absolute;
+			left: 0; top: 100%; width: 100%; height: 2px;
+			background-color: #fa0064;
+			transition: all 0.5s;
+			transform: scale(0,1);
+		}
+
+		#header_container .gnb_wrap li a:hover:after {
+			transform: scale(1);
+		}
+
+		#body_container {
+			min-width: 1280px;
+		}
+
+		#footer_container {
+			min-width: 1280px;
+			background-color: #212529;
+		}
+
+		#footer_container .copy {
+		    background-color: #212529;
+		    letter-spacing: -1px;
+		    font-size: 16px;
+		    color: #fff;
+		    height: 100px;
+		    line-height: 100px;
+		    text-align: center;
+		}
+
+		.m {
+			display: none;
+		}
+
+
+		/*intro*/
+		.intro_section {
+			height: 100%; padding-top: 80px;
+			box-sizing: border-box;
+			min-width: 1280px;
+		}
+
+		.intro_section .intro_inner {
+			height: 100%;
+			background-image: url(../img/bg_intro02.jpg);
+			background-position: center;
+			background-size: 100% 100%;
+			background-attachment: fixed;
+			text-align: center;
+			position: relative;
+		}
+
+		.intro_section .intro_inner::before {
+			content: "";
+			position: absolute;
+			left: 0; right: 0; top: 0; bottom: 0;
+			background-color: #000;
+			opacity: 0.6;
+		}
+
+
+		.intro_section .intro_inner::after {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+		}
+
+		.intro_section .intro_inner .content {
+			display: inline-block;
+			vertical-align: middle;
+			color: #fff; font-size: 24px;
+			position: relative;
+		}
+
+		.intro_section .intro_inner .content h2 {
+			font-size: 86px;
+			font-family: "Open sans", sans-serif;
+		}
+
+		.intro_section .intro_inner .content p {
+			font-size: 26px;
+			font-style: italic;
+			font-family: "Raleway", sans-serif;
+			font-weight: 100;
+			line-height: 1.5;
+		}
+
+		/*section(공통)*/
+		.section {
+			min-width: 1280px;
+			min-height: 800px;
+			box-sizing: border-box;
+			padding: 85px 0;
+		}
+
+		.section .title {
+			font-size: 40px;
+			text-align: center;
+			font-family: "Raleway", sans-serif;
+			text-transform: uppercase;;
+		}
+
+
+		.section .subtext {
+			text-align: center;
+			font-size: 16px;
+			color: #999;
+			font-style: italic;
+			font-family: "Raleway", sans-serif;
+			margin-top: 15px;
+			font-weight: 300;
+		}
+
+
+		/*about*/
+		#about_section {
+			background-color: #FFF5F9;
+		}
+
+		#about_section .content_wrap {
+			width: 900px;
+			min-height: 350px;
+			padding-left: 450px;
+			box-sizing: border-box;
+			margin: 120px auto 0;
+			position: relative;
+		}
+
+		#about_section .content_wrap .profile {
+			position: absolute; left: 0; top: 0;
+			width: 350px; height: 350px;
+			border-radius: 50%;
+			overflow: hidden;
+			box-shadow: 4px 4px 10px #ccc;
+		}
+
+		#about_section .content_wrap .profile img {
+			width: 100%; height: 100%;
+		}
+
+		#about_section .content_wrap .contbox {
+
+		}
+
+		#about_section .content_wrap .contbox .name {
+			font-size: 32px;
+			font-family: "Open sans", sans-serif;
+		}
+
+		#about_section .content_wrap .contbox .job {
+			color: #666; font-size: 18px;
+			margin-top: 5px; display: block;
+			font-family: "Raleway", sans-serif;
+		}
+
+		#about_section .content_wrap .contbox .sns {
+			font-size: 0;
+			margin-top: 25px;
+		}
+
+		#about_section .content_wrap .contbox .sns li {
+
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 10px;
+		}
+
+		#about_section .content_wrap .contbox .sns li:first-child {
+			margin-left: 0;
+		}
+
+
+
+		#about_section .content_wrap .contbox .sns a {
+			display: block; background-color: #000;
+			border-radius: 50%;
+		}
+
+		#about_section .content_wrap .contbox .sns a:hover {
+			background-color: #fa0064;
+		}
+
+		#about_section .content_wrap .contbox .sns img {
+			width: 50px; height: 50px;
+		}
+
+		#about_section .content_wrap .contbox .info {
+			margin-top: 15px;
+		}
+		#about_section .content_wrap .contbox .info table {
+			width: 100%;
+		}
+
+		#about_section .content_wrap .contbox .info tbody th {
+			text-align: left; font-size: 16px;
+			width: 100px; font-weight: normal;
+			padding: 6px 0; vertical-align: top;
+		}
+
+		#about_section .content_wrap .contbox .info tbody td {
+			font-size: 16px; color: #666;
+			padding: 6px 0;
+		}
+
+		#about_section .content_wrap .contbox .info tbody td a{
+			text-decoration: underline;
+		}
+
+
+
+		/*skill*/
+
+		#skill_section{
+		}
+		
+		#skill_section .content {
+			text-align: center;
+			font-size: 0;
+			margin-top: 160px;
+		}
+
+		#skill_section .content li {
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 30px;
+			font-size: 28px;
+		}
+
+		#skill_section .content .icon {
+			width: 180px;
+			height: 180px;
+			box-sizing: border-box;
+			display: block;
+		}
+
+		#skill_section .content .icon:after {
+			display: inline-block;
+			content: "";
+			vertical-align: middle;
+			height: 100%;
+		}
+
+		#skill_section .content p {
+			display: block;
+			font-family: "Open sans", sans-serif;
+			margin-top: 20px;
+			letter-spacing: -1px;
+		}
+
+		#skill_section .content .icon img {
+			transition:all 0.3s;
+		}
+
+		#skill_section .content .icon:hover img {
+			transform: scale(1.2);
+		}
+
+		#skill_section .content .icon.ps {
+			background-color: #001d26;
+			border: 12px solid #00c8ff;
+			border-radius: 50%;
+		}
+
+		#skill_section .content .icon.ai {
+			background-color: #261300;
+			border: 12px solid #ff7c00;
+			border-radius: 50%;
+		}
+
+		#skill_section .content .icon.id {
+			background-color: #280012;
+			border: 12px solid #ff3f94;
+			border-radius: 50%;
+		}
+
+		#skill_section .content .icon.ae {
+			background-color: #1f003f;
+			border: 12px solid #cf91ff;
+			border-radius: 50%;
+		}
+
+
+        #skill_section .content .icon.max{
+            background-color: #09a1a1;
+            border-radius: 50%;
+        }
+
+        
+
+		/*portfolio*/
+		#portfolio_section {
+			background-color: #FFF5F9;
+		}
+
+		#portfolio_section .content_wrap ul {
+			width: 1160px;
+			margin:0 auto;
+			overflow: hidden;
+		}
+
+		#portfolio_section .content_wrap .item {
+			width: 360px; height: 490px;
+			background-color: #fff;
+			float: left; margin: 40px 0 0 40px;
+			border: 1px solid #d3d3d3;
+			box-sizing: border-box;
+		}
+
+		#portfolio_section .content_wrap .item:hover .thumbBox .type {
+			opacity: 1;
+		}
+
+		#portfolio_section .content_wrap .item:hover .thumbBox .type::before,
+		#portfolio_section .content_wrap .item:hover .thumbBox .type::after {
+			transform: scale(1);
+		}
+
+		#portfolio_section .content_wrap .item:hover .thumbBox img {
+			transform:scale(1.1);
+		}
+
+		#portfolio_section .content_wrap .item:nth-child(3n+1) {
+			margin-left: 0;
+		}
+
+		#portfolio_section .content_wrap .item .thumbBox {
+			overflow: hidden; height: 358px;
+			position: relative;
+		}
+
+		#portfolio_section .content_wrap .item .thumbBox img {
+			width: 100%; height: 100%;
+			transition: all 0.3s;
+		}
+
+		#portfolio_section .content_wrap .item .thumbBox .type {
+			opacity: 0;
+			position: absolute; 
+			left: 0; right: 0; top: 0; bottom: 0;
+			background-color: rgba(235, 29, 72, 0.8);
+			color: #fff; line-height: 358px;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 26px;
+			font-family: "Raleway", sans-serif;
+			font-weight: 100;
+			transition: 0.8s;
+		}
+
+		#portfolio_section .content_wrap .item .thumbBox .type::before,
+
+		#portfolio_section .content_wrap .item .thumbBox .type::after {
+			content: "";
+			position: absolute;
+			left: 5px; right: 5px; top: 5px; bottom: 5px;
+			transition: all 0.7s;
+
+		}
+
+		#portfolio_section .content_wrap .item .thumbBox .type::before {
+			border-top: 1px solid #fff;
+			border-bottom: 1px solid #fff;
+			transform: scale(0,1);
+		}
+
+		#portfolio_section .content_wrap .item .thumbBox .type::after {
+			border-left: 1px solid #fff;
+			border-right: 1px solid #fff;
+			transform: scale(1,0);
+		}
+
+		#portfolio_section .content_wrap .item .contbox {
+			padding: 15px 15px 0;
+
+		}
+
+		#portfolio_section .content_wrap .item .contbox .tit {
+			font-size: 18px;
+
+		}
+
+
+		#portfolio_section .content_wrap .item .contbox .type {
+			color: #fa0064;
+			margin-top: 8px; display: block;
+		}
+
+		#portfolio_section .content_wrap .item .contbox .desc {
+			color: #999;
+			line-height: 16px; height: 48px;
+			margin-top: 10px;
+			overflow: hidden;
+			text-overflow:ellipsis;
+			-webkit-line-clamp:3; /* 넷째줄에서 ... 표시 */
+			-webkit-box-orient: vertical;
+			display: -webkit-box;
+			word-wrap:break-word;
+			-o-text-overflow:ellipsis;
+
+		}
+
+
+		/*반응형 (모바일)*/
+		@media (max-width: 1079px) {
+
+
+		/*layout*/
+		#header_container .header_inner {
+			box-sizing: border-box;
+			padding-top: 10px;
+			width: auto;
+		}
+
+		#header_container .logo {
+			position: static;
+			margin: 0;
+			text-align: center;
+		}
+
+		#header_container .logo img {
+			height: 25px; width: auto;
+		}
+
+		#header_container .gnb_wrap {
+			position: static;
+			margin: 0; margin-top: 5px;
+		}
+
+		#header_container .gnb_wrap li {
+			margin-left: 0;
+			width: 33.3%; text-align: center;
+		}
+
+		#header_container .gnb_wrap li:first-child {
+			width: 33.4%;
+		}
+
+		#header_container .gnb_wrap li a {
+			line-height: 40px; height: 40px; 
+		}
+
+
+		#body_container {
+			min-width: 0;
+		}
+
+		#footer_container {
+			min-width: 0;
+			text-align: center;
+			line-height: 80
+			font-size: 12px;
+		}
+
+		/*intro*/
+		.intro_section {
+			min-width: 0;
+		}
+
+		.intro_section .intro_inner .content h2 {
+			font-size: 36px;
+		}
+
+		.intro_section .intro_inner .content p {
+			font-size: 14px;
+		}
+
+		.intro_section .intro_inner .content p .m {
+			display: inline;
+		}
+
+		/*section(공통)*/
+		.section {
+			min-width: 0;
+			min-height: 0;
+			padding: 30px 0;
+		}
+
+		.section .title {
+			font-size: 26px;
+		}
+
+		.section .subtext {
+			font-size: 14px;
+			margin-top: 5px;
+		}
+
+		/*about*/
+		#about_section .content_wrap {
+			padding-left: 0; width: auto;
+			margin-top: 40px;
+		}
+
+		#about_section .content_wrap .profile {
+			position: static; margin: 0 auto;
+			width: 230px; height: 230px;
+		}
+
+		#about_section .content_wrap .contbox .name {
+			font-size: 22px;
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		#about_section .content_wrap .contbox .job {
+			margin-top: 10px;
+			font-size: 16px;
+			text-align: center;
+		}
+
+		#about_section .content_wrap .contbox .sns {
+			margin-top: 10px;
+			text-align: center;
+		}
+
+		#about_section .content_wrap .contbox .info {
+			width: 340px;
+			margin: 30px auto;
+		}
+
+		#about_section .content_wrap .contbox .info tbody th {
+			font-size: 12px;
+		}
+
+		#about_section .content_wrap .contbox .info tbody td {
+			font-size: 12px;
+		}
+
+		#skill_section .content {
+			margin-top: 60px;
+		}
+
+		#skill_section .content li {
+			display: block; 
+			margin-left: 0;
+			margin-top: 30px;
+			margin: 20px 0 0 0;
+		}
+
+		#skill_section .content li:first-child {
+			margin-top: 0;
+		}
+
+		#skill_section .content li .icon {
+			margin: 0 auto;
+		}
+
+		#skill_section .content li .name {
+			font-size: 22px; margin-top: 10px;
+		}
+
+		#skill_section .content ul {
+			width: auto;
+		}
+
+
+		/*portfolio*/
+
+		#portfolio_section .content_wrap {
+			margin-top: 60px;
+		}
+
+		#portfolio_section .content_wrap ul {
+			width: auto; font-size:0;
+			text-align: center;
+			padding: 0 20px;
+			margin-top: -40px;
+		}
+
+		#portfolio_section .content_wrap .item {
+			float: none; display: inline-block; vertical-align: top;
+			margin: 0; font-size: 12px; 
+			text-align: left; margin: 40px 20px 0 !important;
+		}
+
+	}
+
+	@media (max-width: 619px) {
+		#portfolio_section .content_wrap .item {
+		width: 100%;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		}
+
+		left 0 
+		width 100%
+	}
+
+
